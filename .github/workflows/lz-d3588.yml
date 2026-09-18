@@ -67,14 +67,14 @@ jobs:
             sudo locales lsb-release ca-certificates gnupg dirmngr golang-go
           df -Th
 
-      - name: Run Recovery Build in Ubuntu 22.04 container
+      - name: Run Kernel Build
         working-directory: /builder
         run: |
           pwd
           sudo /bin/cp -a ${{ github.workspace }}/* .
           ls -alh
           sudo chown -R root:root .
-          sudo ./kdev-kernel.sh
+          sudo ./kdev-build.sh
           sudo mkdir -p /builder/release
           sudo cp output/* /builder/release
 
