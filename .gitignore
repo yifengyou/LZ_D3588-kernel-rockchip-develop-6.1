@@ -172,3 +172,8 @@ sphinx_*/
 /rust-project.json
 /kos
 /tools/bpf/resolve_btfids/libsubcmd/
+/kernel-devel/
+/kernel-headers/
+/kos-debug/
+/release
+/output
